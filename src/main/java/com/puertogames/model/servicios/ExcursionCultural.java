@@ -1,4 +1,4 @@
-package com.puertogames.model;
+package com.puertogames.model.servicios;
 
 // Subclase que representa una excursión a un lugar histórico o natural
 public class ExcursionCultural extends ServicioTuristico {

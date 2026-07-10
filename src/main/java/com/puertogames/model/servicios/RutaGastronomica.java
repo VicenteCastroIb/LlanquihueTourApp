@@ -1,4 +1,4 @@
-package com.puertogames.model;
+package com.puertogames.model.servicios;
 
 // Subclase que representa una ruta gastronómica con múltiples paradas
 public class RutaGastronomica extends ServicioTuristico {

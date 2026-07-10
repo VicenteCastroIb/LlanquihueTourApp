@@ -1,5 +1,4 @@
-package com.puertogames.model;
-
+package com.puertogames.model.servicios;
 
 
 // Subclase que representa un paseo en embarcación por el lago

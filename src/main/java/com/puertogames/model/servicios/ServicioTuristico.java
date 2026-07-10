@@ -1,4 +1,4 @@
-package com.puertogames.model;
+package com.puertogames.model.servicios;
 
 
 
