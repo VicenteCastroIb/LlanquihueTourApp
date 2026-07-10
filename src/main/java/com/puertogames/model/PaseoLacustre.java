@@ -1,5 +1,7 @@
 package com.puertogames.model;
 
+
+
 // Subclase que representa un paseo en embarcación por el lago
 public class PaseoLacustre extends ServicioTuristico {
 
@@ -7,14 +9,14 @@ public class PaseoLacustre extends ServicioTuristico {
     private String tipoEmbarcacion;
 
     // Constructor: llama al constructor padre con super() y agrega su atributo propio
-    public PaseoLacustre(String nombre, int duracionHoras, String tipoEmbarcacion) {
-        super(nombre, duracionHoras);
+    public PaseoLacustre(String nombreServicio, int duracionHoras, String tipoEmbarcacion) {
+        super(nombreServicio, duracionHoras);
         this.tipoEmbarcacion = tipoEmbarcacion;
     }
 
     @Override
     public void mostrarInformacion() {
-        System.out.println(super.getNombre() + ", duracion: " + super.getDuracionHoras() + "hrs, tipo embarcacion: " + tipoEmbarcacion);
+        System.out.println(super.getNombreServicio() + ", duracion: " + super.getDuracionHoras() + "hrs, tipo embarcacion: " + tipoEmbarcacion);
     }
     // Getters y setters
     public String getTipoEmbarcacion() {
@@ -29,7 +31,7 @@ public class PaseoLacustre extends ServicioTuristico {
     @Override
     public String toString() {
         return "PaseoLacustre --> " +
-                "Nombre: " + super.getNombre() +
+                "Nombre: " + super.getNombreServicio() +
                 " | Duracion-Horas: " + super.getDuracionHoras() +
                 " | Tipo Embarcacion: " + tipoEmbarcacion;
     }

@@ -7,14 +7,14 @@ public class ExcursionCultural extends ServicioTuristico {
     private String lugarHistorico;
 
     // Constructor: llama al constructor padre con super() y agrega su atributo propio
-    public ExcursionCultural(String nombre, int duracionHoras, String lugarHistorico) {
-        super(nombre, duracionHoras);
+    public ExcursionCultural(String nombreServicio, int duracionHoras, String lugarHistorico) {
+        super(nombreServicio, duracionHoras);
         this.lugarHistorico = lugarHistorico;
     }
 
     @Override
     public void mostrarInformacion() {
-        System.out.println(super.getNombre() + ", duracion: " + super.getDuracionHoras() + "hrs, lugar historico: " + lugarHistorico);
+        System.out.println(super.getNombreServicio() + ", duracion: " + super.getDuracionHoras() + "hrs, lugar historico: " + lugarHistorico);
     }
 
     // Getters y setters
@@ -30,7 +30,7 @@ public class ExcursionCultural extends ServicioTuristico {
     @Override
     public String toString() {
         return "ExcursionCultural --> " +
-                "Nombre: " + super.getNombre() +
+                "Nombre: " + super.getNombreServicio() +
                 " | Duracion-Horas: " + super.getDuracionHoras() +
                 " | Lugar Historico: " + lugarHistorico;
     }

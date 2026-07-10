@@ -3,29 +3,29 @@ package com.puertogames.model;
 
 
 // Superclase base para todos los servicios turísticos de Llanquihue Tour
-public class ServicioTuristico {
+public abstract class ServicioTuristico {
 
     // Atributos comunes a todos los servicios
-    private String nombre;
+    private String nombreServicio;
     private int duracionHoras;
 
     // Constructor que inicializa los atributos comunes
-    public ServicioTuristico(String nombre, int duracionHoras) {
-        this.nombre = nombre;
+    public ServicioTuristico(String nombreServicio, int duracionHoras) {
+        this.nombreServicio = nombreServicio;
         this.duracionHoras = duracionHoras;
     }
 
     public void mostrarInformacion() {
-        System.out.println(nombre + ", Duracion: " + duracionHoras + " hrs.");
+        System.out.println(nombreServicio + ", Duracion: " + duracionHoras + " hrs.");
     }
 
     // Getters y setters
-    public String getNombre() {
-        return nombre;
+    public String getNombreServicio() {
+        return nombreServicio;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String nombreServicio) {
+        this.nombreServicio = nombreServicio;
     }
 
     public int getDuracionHoras() {
@@ -40,7 +40,7 @@ public class ServicioTuristico {
     @Override
     public String toString() {
         return "ServicioTuristico: " +
-                "nombre= " + nombre + '\'' +
+                "nombre= " + nombreServicio + '\'' +
                 ", duracionHoras=" + duracionHoras;
     }
 }

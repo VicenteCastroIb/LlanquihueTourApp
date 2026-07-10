@@ -7,14 +7,14 @@ public class RutaGastronomica extends ServicioTuristico {
     private int numeroDeParadas;
 
     // Constructor: llama al constructor padre con super() y agrega su atributo propio
-    public RutaGastronomica(String nombre, int duracionHoras, int numeroDeParadas) {
-        super(nombre, duracionHoras);
+    public RutaGastronomica(String nombreServicio, int duracionHoras, int numeroDeParadas) {
+        super(nombreServicio, duracionHoras);
         this.numeroDeParadas = numeroDeParadas;
     }
 
     @Override
     public void mostrarInformacion() {
-        System.out.println(super.getNombre() + ", duracion: " + super.getDuracionHoras() + "hrs, numero de paradas: " + numeroDeParadas);
+        System.out.println(super.getNombreServicio() + ", duracion: " + super.getDuracionHoras() + "hrs, numero de paradas: " + numeroDeParadas);
     }
 
     // Getters y setters
@@ -30,7 +30,7 @@ public class RutaGastronomica extends ServicioTuristico {
     @Override
     public String toString() {
         return "RutaGastronomica --> " +
-                "Nombre: " + super.getNombre() +
+                "Nombre: " + super.getNombreServicio() +
                 " | Duracion-Horas: " + super.getDuracionHoras() +
                 " | Numero de Paradas: " + numeroDeParadas;
     }
