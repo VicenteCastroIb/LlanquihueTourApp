@@ -12,11 +12,12 @@ public class GestorEntidades {
     // Metodo para generar datos de ejemplo en lista.
     public ArrayList<Registrable> generarListaRegistrables() {
         listaRegistrables.add(new GuiaTuristico("Roberto", "Robertoguia@gmail.com", 6));
-        listaRegistrables.add(new GuiaTuristico("Alejandra", "Alejandraguia1@gmail.com", 12));
         listaRegistrables.add(new ColaboradorExterno("Juan Cordero", "Juansito@gmail.com", "HardwareCh"));
-        listaRegistrables.add(new ColaboradorExterno("Jose Miguel", "Miguelsito@gmail.com", "PcFactory"));
+        listaRegistrables.add(new GuiaTuristico("Alejandra", "Alejandraguia1@gmail.com", 12));
         listaRegistrables.add(new Vehiculo("Tuxon", "Autoneta"));
         listaRegistrables.add(new Vehiculo("Raptor", "Camioneta"));
+        listaRegistrables.add(new ColaboradorExterno("Jose Miguel", "Miguelsito@gmail.com", "PcFactory"));
+
 
         return listaRegistrables;
     }
@@ -30,10 +31,12 @@ public class GestorEntidades {
     }
 
     // Metodo para demostrar comportamiento polimorfico de objetos en lista polimorfica.
-    public void getResumen() {
-        for(Registrable r : listaRegistrables){
-            r.mostrarResumen();
+    public String getResumen() {
+        StringBuilder resumen = new StringBuilder();
+        for(Registrable r : listaRegistrables) {
+            resumen.append(r.mostrarResumen());
         }
+        return resumen.toString();
     }
 
     // Metodo para aniadir objeto a lista
@@ -60,6 +63,7 @@ public class GestorEntidades {
                 resumen.append(vehiculo.mostrarResumen());
             }
         }
+        resumen.append("==================================================");
         return resumen.toString();
     }
 }

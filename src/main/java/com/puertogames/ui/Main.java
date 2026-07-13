@@ -1,7 +1,4 @@
 package com.puertogames.ui;
-
-import com.puertogames.ui.VentanaPrincipalFrame;
-
 import javax.swing.*;
 
 // Punto de entrada del sistema Llanquihue Tour.
